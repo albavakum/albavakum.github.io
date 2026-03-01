@@ -1,245 +1,569 @@
 <!DOCTYPE html>
-<html style="font-size: 16px;" lang="tr"><head>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <meta name="keywords" content="vakum, termaform, termoform, kalip, kalıp, seperatör, çikolota, şeker">
-    <meta name="description" content="25 yılı aşkın tecrübemizle en kaliteli vakum ve termoform kalıplarını, çikolata ve şeker seperetörlerini en iyi şekilde imal ediyoruz.">
-    <title>Şahin CNC</title>
-    <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="Uzman-Vakum.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery-1.9.1.min.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
-    <meta property="og:title" content="Şahin CNC">
-    <meta property="og:description" content="25 yılı aşkın tecrübemizle en kaliteli vakum ve termoform kalıplarını çikolata ve şeker seperetörlerini en iyi şekilde imal ediyoruz.">
-    <meta property="og:url" content="sahincnc.net">
-    <link rel="canonical" href="Şahin CNC Fason Yedek Parça İmalatı">
-    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
-    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i">
     
-    
-    
-    
-    
-    
-    <script type="application/ld+json">{
-		"@context": "http://schema.org",
-		"@type": "Organization",
-		"name": "Uzman Vakum",
-		"url": "/"
-}</script>
-    <meta name="theme-color" content="#478ac9">
-    <meta property="og:type" content="website">
-  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
-  <body data-home-page="https://uzmanvakum.nicepage.io/Uzman-Vakum.html?version=13bd863e-785f-8640-5ed8-fa09c2c20e85" data-home-page-title="Uzman Vakum" data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="tr">
-    <section class="u-clearfix u-image u-shading u-section-1" id="sec-0876" data-image-width="3000" data-image-height="1400">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <h1 class="u-text u-text-1" style="text-align: center;" data-animation-name="customAnimationIn" data-animation-duration="2000">ŞAHİN CNC</h1>
-        <h3 class="u-text u-text-1" style="text-align: center; margin-top: 0px;" data-animation-name="customAnimationIn" data-animation-duration="2000">Freze / Torna</h3>
-        <p style="margin-top: 45px; font-size: 22px;" class="u-align-center u-large-text u-text u-text-variant u-text-2">   Fason yedek parça imalatı, talaşlı imalat, oyuncak vakum kalıbı, termoform kalıbı, çikolata seperatörlerini müşterilerimizin istekleri doğrultusunda imal etmekteyiz. </p>
-        <h6 class="u-align-center u-text u-text-3" style="text-align: center; margin: auto; margin-top: 55px;" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="0">
-          <a style="text-align: center;" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="Uzman-Vakum.html#carousel_0c43">Bize Ulaşın</a>
-        </h6>
-      </div>
+    <title>Şahin CNC | Freze, Torna ve Kalıp İmalatı</title>
+    <meta name="description" content="25 yıllık tecrübemizle freze, torna, fason yedek parça, oyuncak vakum kalıbı ve termoform kalıbı imalatında güvenilir ve kaliteli hizmet sunuyoruz. İstanbul Başakşehir.">
+    <meta name="keywords" content="CNC, Freze, Torna, Fason İmalat, Talaşlı İmalat, Vakum Kalıbı, Termoform Kalıbı, Şahin CNC, İstanbul CNC, Başakşehir CNC">
+    <meta name="author" content="Şahin CNC">
+    <meta name="robots" content="index, follow">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* CSS Değişkenleri ve Temel Ayarlar */
+        :root {
+            --primary-color: #0f172a;
+            --secondary-color: #2563eb;
+            --accent-color: #38bdf8;
+            --text-color: #334155;
+            --light-bg: #f8fafc;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navigasyon (Header) */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+
+        /* Hero Bölümü */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1565439390118-bbf16d0069da?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 2rem;
+            margin-top: 60px;
+        }
+
+        .hero-content h1 {
+            color: var(--white);
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--secondary-color);
+            color: var(--white);
+            font-weight: 600;
+            border-radius: 5px;
+            transition: var(--transition);
+            border: 2px solid var(--secondary-color);
+        }
+
+        .btn:hover {
+            background: transparent;
+            color: var(--white);
+        }
+
+        /* Ortak Bölüm Stilleri */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background: var(--secondary-color);
+            bottom: -10px;
+            left: 25%;
+        }
+
+        /* Hakkımızda Bölümü */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .feature-item i {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+        }
+
+        /* Hizmetler Bölümü */
+        .services {
+            background: var(--light-bg);
+            max-width: 100%;
+        }
+
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            border-bottom: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--secondary-color);
+        }
+
+        .service-card i {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            margin-bottom: 1rem;
+        }
+
+        /* Galeri Bölümü */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            height: 250px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* İletişim Bölümü */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info-item i {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            background: var(--light-bg);
+            padding: 1rem;
+            border-radius: 50%;
+        }
+
+        .contact-info-item h4 {
+            margin-bottom: 0.2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Animasyonlar (Scroll JS için) */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobil Uyumluluk */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                flex-direction: column;
+                background: var(--white);
+                width: 100%;
+                text-align: center;
+                padding: 2rem 0;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                transition: 0.4s ease;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .about-grid, .contact-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">Şahin <span>CNC</span></a>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero">Ana Sayfa</a></li>
+                <li><a href="#about">Hakkımızda</a></li>
+                <li><a href="#services">Hizmetlerimiz</a></li>
+                <li><a href="#gallery">Galeri</a></li>
+                <li><a href="#contact">İletişim</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="hero-content fade-in">
+            <h1>Hassas Üretim, 25 Yıllık Güven</h1>
+            <p>Freze, Torna, Talaşlı İmalat ve Özel Kalıp Tasarımlarında İhtiyacınıza Özel Profesyonel Çözüm Ortağınız.</p>
+            <a href="#contact" class="btn">Bizimle İletişime Geçin</a>
+        </div>
     </section>
-    <section class="u-clearfix u-image u-section-2" id="sec-6ab8" data-image-width="1080" data-image-height="721">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout" >
-            <div class="u-layout-row">
-              <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
-                <div class="u-container-layout u-container-layout-1">
-                  <h2 class="u-text u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="2000"> 25 Yıllık Tecrübe</h2>
-                  <p class="u-text u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="0">25 yıllık deneyimimiz ile en kaliteli yedek parçaları üretiyoruz.​ Kalite, Güven ve Süreye öncelik veriyoruz.</p>
-                </div>
-              </div>
-              <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
-                <div class="u-container-layout u-container-layout-2">
-                  <ul class="u-custom-list u-spacing-10 u-text u-text-default u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="0">
-                    <li style="padding-left: 20px;">
-                      <div class="u-list-icon u-text-palette-3-base">
-                        <div style="font-size: 1.2em; margin: -1.2em;">►</div>
-                      </div>
-                    </li>
-                    <li style="padding-left: 20px;">Kaliteye önem veriyoruz. Müşteri memnuniyeti için ilk şartımız…<br>
-                    </li>
-                    <li style="padding-left: 20px;">
-                      <div class="u-list-icon u-text-palette-3-base">
-                        <div style="font-size: 1.2em; margin: -1.2em;">►</div>
-                      </div>Güven olmazsa olmazımız. Her şeyden önce GÜVEN!<br>
-                    </li>
-                    <li style="padding-left: 20px;">
-                      <div class="u-list-icon u-text-palette-3-base">
-                        <div style="font-size: 1.2em; margin: -1.2em;">►</div>
-                      </div>Güçlü ve deneyimli bir ekiple hizmet veriyoruz…<br>
-                    </li>
-                    <li style="padding-left: 20px;">
-                      <div class="u-list-icon u-text-palette-3-base">
-                        <div style="font-size: 1.2em; margin: -1.2em;">►</div>
-                      </div>
-                    </li>
-                    <li style="padding-left: 20px;">Zaman herkes için çok önemlidir! Planlı çalışıyoruz…<br>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+
+    <section id="about">
+        <div class="section-title fade-in">
+            <h2>Hakkımızda</h2>
         </div>
-      </div>
+        <div class="about-grid">
+            <div class="about-text fade-in">
+                <h3>25 Yıllık Sektör Deneyimi</h3>
+                <p>Çeyrek asırlık tecrübemiz ile en kaliteli yedek parçaları üretiyoruz. Kalite, güven ve zamanında teslimata her şeyden çok önem veriyoruz.</p>
+                <p>Fason yedek parça imalatı, talaşlı imalat, oyuncak vakum kalıbı, termoform kalıbı ve çikolata seperatörlerini tamamen müşteri spesifikasyonlarına ve isteklerine uygun olarak modern tezgahlarımızda üretiyoruz.</p>
+                
+                <div class="features">
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Yüksek Kalite Standartı</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-handshake"></i>
+                        <span>Koşulsuz Güven</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-users-cog"></i>
+                        <span>Deneyimli Uzman Ekip</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Zamanında Teslimat</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image fade-in">
+                <img src="images/YeniProje1.jpg" alt="Şahin CNC İmalat" style="width: 100%; border-radius: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);" onerror="this.src='https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+            </div>
+        </div>
     </section>
-    <section class="image-2 u-align-left u-clearfix u-image u-section-3" id="carousel_75d4" data-image-width="1080" data-image-height="721">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="custom-expanded u-carousel u-expanded-width-lg u-expanded-width-xl u-gallery u-gallery-slider u-layout-carousel u-lightbox u-no-transition u-show-text-on-hover u-gallery-1" id="carousel-1c47" data-interval="5000" data-u-ride="carousel">
-          <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-1">
-            <li data-u-target="#carousel-1c47" data-u-slide-to="0" class="u-active u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
-            <li data-u-target="#carousel-1c47" data-u-slide-to="1" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
-            <li data-u-target="#carousel-1c47" data-u-slide-to="2" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
-          </ol>
-          <div class="u-carousel-inner u-gallery-inner" role="listbox">
-            <div class="u-active u-carousel-item u-effect-fade u-gallery-item u-carousel-item-1">
-              <div class="u-back-slide" data-image-width="1455" data-image-height="828">
-                <img class="u-back-image u-expanded u-back-image-1" src="images/Ekrangrnts2024-06-25171540.png">
-              </div>
-              <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-1">
-                <h3 class="u-gallery-heading">Şahin CNC</h3>
-              </div>
-            </div>
-            <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-2">
-              <div class="u-back-slide">
-                <img class="u-back-image u-expanded u-back-image-2" src="images/YeniProje1.jpg" alt="Şahin CNC">
-              </div>
-              <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-2">
-                <h3 class="u-gallery-heading">Şahin CNC</h3>
-              </div>
-              <style data-mode="XL"></style>
-              <style data-mode="LG"></style>
-              <style data-mode="MD"></style>
-              <style data-mode="SM"></style>
-              <style data-mode="XS"></style>
-            </div>
-            <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-3">
-              <div class="u-back-slide">
-                <img class="u-back-image u-expanded u-back-image-3" src="images/YeniProjedxcsa.jpg" alt="Şahin CNC">
-              </div>
-              <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-3">
-                <h3 class="u-gallery-heading">Şahin CNC</h3>
-              </div>
-              <style data-mode="XL"></style>
-              <style data-mode="LG"></style>
-              <style data-mode="MD"></style>
-              <style data-mode="SM"></style>
-              <style data-mode="XS"></style>
-            </div>
-          </div>
-          <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-1" href="#carousel-1c47" role="button" data-u-slide="prev">
-            <span aria-hidden="true">
-              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
-c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
-c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
-            </span>
-            <span class="sr-only">
-              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
-c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
-c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
-            </span>
-          </a>
-          <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-2" href="#carousel-1c47" role="button" data-u-slide="next">
-            <span aria-hidden="true">
-              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
-L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
-c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
-            </span>
-            <span class="sr-only">
-              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
-L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
-c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
-            </span>
-          </a>
+
+    <section id="services" class="services">
+        <div class="section-title fade-in">
+            <h2>Hizmetlerimiz</h2>
+            <p>Modern makine parkurumuz ve uzman kadromuz ile sunduğumuz çözümler.</p>
         </div>
-        <div class="data-layout-selected u-clearfix u-expanded-width u-gutter-20 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-col">
-              <div class="u-size-30">
-                <div class="u-layout-row">
-                  <div class="u-align-center u-container-style u-image u-layout-cell u-size-30 u-image-1" data-image-width="12240" data-image-height="12240" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="0">
-                    <div class="u-container-layout u-container-layout-1"></div>
-                  </div>
-                  <div class="u-container-style u-image u-layout-cell u-size-30 u-image-2" data-image-width="12240" data-image-height="12240" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="0">
-                    <div class="u-container-layout u-container-layout-2"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="u-size-30">
-                <div class="u-layout-row">
-                  <div class="u-container-style u-image u-layout-cell u-size-30 u-image-3" data-image-width="1920" data-image-height="1920" data-animation-name="fadeIn" data-animation-duration="1000" data-animation-delay="0">
-                    <div class="u-container-layout u-container-layout-3"></div>
-                  </div>
-                  <div class="u-container-style u-image u-layout-cell u-size-30 u-image-4" data-image-width="1920" data-image-height="1893" data-animation-name="fadeIn" data-animation-duration="1000" data-animation-delay="0">
-                    <div class="u-container-layout u-container-layout-4"></div>
-                  </div>
-                </div>
-              </div>
+        <div class="services-container">
+            <div class="service-card fade-in">
+                <i class="fas fa-cogs"></i>
+                <h3>Freze & Torna</h3>
+                <p>Hassas toleranslarda CNC freze ve torna işlemleri ile özel parça üretimleri.</p>
             </div>
-          </div>
+            <div class="service-card fade-in">
+                <i class="fas fa-cubes"></i>
+                <h3>Kalıp İmalatı</h3>
+                <p>Oyuncak vakum kalıbı, termoform kalıbı ve çikolata seperatörleri tasarımı ve üretimi.</p>
+            </div>
+            <div class="service-card fade-in">
+                <i class="fas fa-tools"></i>
+                <h3>Fason ve Talaşlı İmalat</h3>
+                <p>İhtiyacınıza uygun malzemelerden, istenen özelliklerde seri fason parça imalatı.</p>
+            </div>
         </div>
-      </div>
     </section>
-    <section class="u-clearfix u-image u-valign-middle-md u-section-4" id="carousel_0c43" data-image-width="1280" data-image-height="854">
-      <div class="u-list u-list-1">
-        <div class="u-repeater u-repeater-1">
-          <div class="u-align-center u-container-style u-list-item u-repeater-item u-white u-list-item-1">
-            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1"><span class="u-icon u-icon-circle u-text-palette-4-dark-1 u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 52 52" style=""><use xlink:href="#svg-077e"></use></svg><svg class="u-svg-content" viewBox="0 0 52 52" x="0px" y="0px" id="svg-077e" style="enable-background:new 0 0 52 52;"><path style="fill:currentColor;" d="M38.853,5.324L38.853,5.324c-7.098-7.098-18.607-7.098-25.706,0h0
-	C6.751,11.72,6.031,23.763,11.459,31L26,52l14.541-21C45.969,23.763,45.249,11.72,38.853,5.324z M26.177,24c-3.314,0-6-2.686-6-6
-	s2.686-6,6-6s6,2.686,6,6S29.491,24,26.177,24z"></path></svg></span>
-              <h5 class="u-text u-text-1">Konum</h5>
-              <p class="u-text u-text-2">Biksan Sanayi Sitesi A1/15 Başakşehir/İstanbul </p>
-            </div>
-          </div>
-          <div class="u-align-center u-container-style u-list-item u-repeater-item u-white u-list-item-2">
-            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2"><span class="u-icon u-icon-circle u-text-palette-4-dark-1 u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 513.64 513.64" style=""><use xlink:href="#svg-9786"></use></svg><svg class="u-svg-content" viewBox="0 0 513.64 513.64" x="0px" y="0px" id="svg-9786" style="enable-background:new 0 0 513.64 513.64;"><g><g><path d="M499.66,376.96l-71.68-71.68c-25.6-25.6-69.12-15.359-79.36,17.92c-7.68,23.041-33.28,35.841-56.32,30.72    c-51.2-12.8-120.32-79.36-133.12-133.12c-7.68-23.041,7.68-48.641,30.72-56.32c33.28-10.24,43.52-53.76,17.92-79.36l-71.68-71.68    c-20.48-17.92-51.2-17.92-69.12,0l-48.64,48.64c-48.64,51.2,5.12,186.88,125.44,307.2c120.32,120.32,256,176.641,307.2,125.44    l48.64-48.64C517.581,425.6,517.581,394.88,499.66,376.96z"></path>
-</g>
-</g></svg></span>
-              <h5 class="u-text u-text-3">Telefon numarası</h5>
-              <p class="u-text u-text-4"><a class="u-active-none u-border-1 u-border-active-black u-border-hover-black u-border-no-left u-border-no-right u-border-no-top u-border-palette-4-dark-2 u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-hover-black u-text-palette-4-dark-1 u-btn-1" href="tel://00905428113496">05428113496</a></p>
-            </div>
-          </div>
-          <div class="u-align-center u-container-style u-list-item u-repeater-item u-white u-list-item-3">
-            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3"><span class="u-icon u-icon-circle u-text-palette-4-dark-1 u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xlink:href="#svg-9f82"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-9f82" style="enable-background:new 0 0 512 512;"><g><g><path d="M507.49,101.721L352.211,256L507.49,410.279c2.807-5.867,4.51-12.353,4.51-19.279V121    C512,114.073,510.297,107.588,507.49,101.721z"></path>
-</g>
-</g><g><g><path d="M467,76H45c-6.927,0-13.412,1.703-19.279,4.51l198.463,197.463c17.548,17.548,46.084,17.548,63.632,0L486.279,80.51    C480.412,77.703,473.927,76,467,76z"></path>
-</g>
-</g><g><g><path d="M4.51,101.721C1.703,107.588,0,114.073,0,121v270c0,6.927,1.703,13.413,4.51,19.279L159.789,256L4.51,101.721z"></path>
-</g>
-</g><g><g><path d="M331,277.211l-21.973,21.973c-29.239,29.239-76.816,29.239-106.055,0L181,277.211L25.721,431.49    C31.588,434.297,38.073,436,45,436h422c6.927,0,13.412-1.703,19.279-4.51L331,277.211z"></path>
-</g>
-</g></svg></span>
-              <h5 class="u-text u-text-5">e Posta</h5>
-              <p class="u-text u-text-6">
-                <a href="mailto:sahinkalipset@hotmail.com" class="u-active-none u-border-1 u-border-active-black u-border-hover-black u-border-no-left u-border-no-right u-border-no-top u-border-palette-4-dark-2 u-btn u-button-link u-button-style u-hover-none u-none u-text-active-black u-text-hover-black u-text-palette-4-dark-1 u-btn-1">sahinkalipset@hotmail.com.com</a>
-              </p>
-            </div>
-          </div>
+
+    <section id="gallery">
+        <div class="section-title fade-in">
+            <h2>Çalışmalarımız</h2>
         </div>
-      </div>
-      <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
-        <div class="u-layout">
-          <div class="u-layout-row">
-            <div class="u-black u-container-style u-layout-cell u-right-cell u-size-60 u-layout-cell-1">
-              <div class="u-container-layout u-container-layout-4">
-                <div class="u-expanded u-grey-light-2 u-map">
-                  <div class="embed-responsive">
-                    <iframe class="embed-responsive-item" src="https://maps.google.com/maps?output=embed&amp;q=%C4%B0kitelli%20OSB%2C%20Biksan%20Sanayi%20Sitesi%2040-12%2C%2034490%20Ba%C5%9Fak%C5%9Fehir%2F%C4%B0stanbul%0A%0A&amp;z=17&amp;t=m&amp;hl=tr" data-map="JTdCJTIyYWRkcmVzcyUyMiUzQSUyMiVDNCVCMGtpdGVsbGklMjBPU0IlMkMlMjBCaWtzYW4lMjBTYW5heWklMjBTaXRlc2klMjA0MC0xMiUyQyUyMDM0NDkwJTIwQmElQzUlOUZhayVDNSU5RmVoaXIlMkYlQzQlQjBzdGFuYnVsJTVDbiU1Q24lMjIlMkMlMjJ6b29tJTIyJTNBMTclMkMlMjJ0eXBlSWQlMjIlM0ElMjJyb2FkJTIyJTJDJTIybGFuZyUyMiUzQSUyMnRyJTIyJTJDJTIyYXBpS2V5JTIyJTNBbnVsbCUyQyUyMm1hcmtlcnMlMjIlM0ElNUIlNUQlN0Q="></iframe>
-                  </div>
-                </div>
-              </div>
+        <div class="gallery-grid fade-in">
+            <div class="gallery-item">
+                <img src="images/Ekrangrnts2024-06-25171540.png" alt="CNC Çalışması 1" onerror="this.src='https://images.unsplash.com/photo-1565814636199-ae8133055c1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'">
             </div>
-          </div>
+            <div class="gallery-item">
+                <img src="images/YeniProjedxcsa.jpg" alt="CNC Çalışması 2" onerror="this.src='https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1535303311164-664fc9ec6532?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Örnek Çalışma">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1611078516366-2615438816f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Örnek Çalışma">
+            </div>
         </div>
-      </div>
     </section>
-    
-    
-    
-    
-  
-</body></html>
+
+    <section id="contact">
+        <div class="section-title fade-in">
+            <h2>Bize Ulaşın</h2>
+            <p>İhtiyaçlarınız için teklif almak veya detaylı bilgi edinmek için bizimle iletişime geçin.</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info fade-in">
+                <div class="contact-info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Adres</h4>
+                        <p>Biksan Sanayi Sitesi A1/15<br>Başakşehir / İstanbul</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <h4>Telefon</h4>
+                        <p><a href="tel:+905428113496">0 542 811 34 96</a></p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>E-Posta</h4>
+                        <p><a href="mailto:sahinkalipset@hotmail.com">sahinkalipset@hotmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-map fade-in">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48117.3758117585!2d28.7618035!3d41.0838334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa5e9e2b02a63%3A0xc66c1e34c9f10928!2sBa%C5%9Fak%C5%9Fehir%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1680000000000!5m2!1str!2str" width="100%" height="300" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Şahin CNC Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <script>
+        // Dinamik Yıl Güncelleme (Footer için)
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobil Menü Aç/Kapat Mantığı
+        const mobileBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        const navItems = document.querySelectorAll('.nav-links li a');
+
+        mobileBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            // İkonu değiştir (Hamburger'den Çarpı'ya)
+            const icon = mobileBtn.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Menüden bir linke tıklandığında menüyü kapat (Mobil için)
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileBtn.querySelector('i').classList.remove('fa-times');
+                mobileBtn.querySelector('i').classList.add('fa-bars');
+            });
+        });
+
+        // Yumuşak Geçiş (Smooth Scroll)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                const headerOffset = 70;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Sayfa Kaydırıldıkça Elementlerin Belirmesi (Scroll Animasyonları)
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Sadece bir kere çalışsın
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>

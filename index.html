@@ -7,14 +7,13 @@
     <title>Şahin CNC | Freze, Torna ve Kalıp İmalatı</title>
     <meta name="description" content="25 yıllık tecrübemizle freze, torna, fason yedek parça, oyuncak vakum kalıbı ve termoform kalıbı imalatında güvenilir ve kaliteli hizmet sunuyoruz. İstanbul Başakşehir.">
     <meta name="keywords" content="CNC, Freze, Torna, Fason İmalat, Talaşlı İmalat, Vakum Kalıbı, Termoform Kalıbı, Şahin CNC, İstanbul CNC, Başakşehir CNC">
-    <meta name="author" content="Şahin CNC">
     <meta name="robots" content="index, follow">
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* CSS Değişkenleri ve Temel Ayarlar */
+        /* CSS Değişkenleri */
         :root {
             --primary-color: #0f172a;
             --secondary-color: #2563eb;
@@ -25,329 +24,163 @@
             --transition: all 0.3s ease;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Open Sans', sans-serif;
             color: var(--text-color);
             line-height: 1.6;
             overflow-x: hidden;
+            scroll-behavior: smooth;
         }
 
-        h1, h2, h3, h4, h5 {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--primary-color);
-        }
+        h1, h2, h3, h4, h5 { font-family: 'Montserrat', sans-serif; color: var(--primary-color); }
+        a { text-decoration: none; color: inherit; }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        /* Navigasyon (Header) */
+        /* Header */
         header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: var(--white);
+            position: fixed; top: 0; width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px);
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            z-index: 1000;
-            transition: var(--transition);
+            z-index: 1000; transition: var(--transition);
         }
 
         .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            max-width: 1200px; margin: 0 auto; padding: 1rem 2rem;
+            display: flex; justify-content: space-between; align-items: center;
         }
 
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            letter-spacing: 1px;
-        }
+        .logo { font-size: 1.8rem; font-weight: 700; color: var(--primary-color); letter-spacing: 1px; }
+        .logo span { color: var(--secondary-color); }
 
-        .logo span {
-            color: var(--secondary-color);
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { font-weight: 600; position: relative; padding-bottom: 5px;}
+        
+        /* Menü Hover Efekti */
+        .nav-links a::after {
+            content: ''; position: absolute; width: 0; height: 2px;
+            bottom: 0; left: 0; background-color: var(--secondary-color);
+            transition: width 0.3s ease;
         }
+        .nav-links a:hover::after { width: 100%; }
 
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
+        .mobile-menu-btn { display: none; font-size: 1.5rem; cursor: pointer; color: var(--primary-color); }
 
-        .nav-links a {
-            font-weight: 600;
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover {
-            color: var(--secondary-color);
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--primary-color);
-        }
-
-        /* Hero Bölümü */
+        /* Hero Bölümü ve Daktilo Efekti CSS */
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1565439390118-bbf16d0069da?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: var(--white);
-            padding: 0 2rem;
-            margin-top: 60px;
+            display: flex; align-items: center; justify-content: center;
+            text-align: center; color: var(--white); padding: 0 2rem;
         }
 
         .hero-content h1 {
-            color: var(--white);
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            color: var(--white); font-size: 3rem; margin-bottom: 1rem;
         }
+        
+        /* Daktilo imleci animasyonu */
+        .typing-text { color: var(--accent-color); border-right: 3px solid var(--accent-color); padding-right: 5px; animation: blink 0.75s step-end infinite; }
+        @keyframes blink { 50% { border-color: transparent; } }
 
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+        .hero-content p { font-size: 1.2rem; margin-bottom: 2rem; max-width: 800px; margin: 0 auto 2rem auto; }
 
         .btn {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: var(--secondary-color);
-            color: var(--white);
-            font-weight: 600;
-            border-radius: 5px;
-            transition: var(--transition);
-            border: 2px solid var(--secondary-color);
+            display: inline-block; padding: 1rem 2.5rem;
+            background: var(--secondary-color); color: var(--white);
+            font-weight: 600; border-radius: 5px; transition: var(--transition);
+            border: 2px solid var(--secondary-color); cursor: pointer;
         }
+        .btn:hover { background: transparent; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
 
-        .btn:hover {
-            background: transparent;
-            color: var(--white);
+        /* Ortak Bölümler */
+        section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
+        .section-title { text-align: center; margin-bottom: 3rem; }
+        .section-title h2 { font-size: 2.5rem; margin-bottom: 0.5rem; position: relative; display: inline-block; }
+        .section-title h2::after { content: ''; position: absolute; width: 50%; height: 3px; background: var(--secondary-color); bottom: -10px; left: 25%; }
+
+        /* İstatistikler (Sayaçlar) */
+        .stats-container {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem; background: var(--primary-color); color: var(--white);
+            padding: 3rem 2rem; border-radius: 10px; text-align: center; margin-top: 3rem;
         }
+        .stat-box i { font-size: 2.5rem; color: var(--accent-color); margin-bottom: 1rem; }
+        .stat-box h3 { color: var(--white); font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .stat-box p { font-size: 1.1rem; opacity: 0.8; }
 
-        /* Ortak Bölüm Stilleri */
-        section {
-            padding: 5rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            width: 50%;
-            height: 3px;
-            background: var(--secondary-color);
-            bottom: -10px;
-            left: 25%;
-        }
-
-        /* Hakkımızda Bölümü */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-text p {
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .feature-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .feature-item i {
-            color: var(--secondary-color);
-            font-size: 1.5rem;
-        }
-
-        /* Hizmetler Bölümü */
-        .services {
-            background: var(--light-bg);
-            max-width: 100%;
-        }
-
-        .services-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
+        /* Hizmetler & Hakkımızda */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .features { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
+        .feature-item i { color: var(--secondary-color); font-size: 1.5rem; margin-right: 10px;}
+        
+        .services-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
         .service-card {
-            background: var(--white);
-            padding: 2.5rem 2rem;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: var(--transition);
-            border-bottom: 4px solid transparent;
+            background: var(--white); padding: 2.5rem 2rem; border-radius: 10px;
+            text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: var(--transition); border-bottom: 4px solid transparent;
         }
+        .service-card:hover { transform: translateY(-10px); border-bottom: 4px solid var(--secondary-color); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .service-card i { font-size: 3rem; color: var(--secondary-color); margin-bottom: 1.5rem; }
 
-        .service-card:hover {
-            transform: translateY(-10px);
-            border-bottom: 4px solid var(--secondary-color);
+        /* Galeri ve Lightbox (Resim Büyütme) */
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+        .gallery-item { position: relative; overflow: hidden; border-radius: 8px; height: 250px; cursor: pointer; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .gallery-item:hover img { transform: scale(1.1); }
+        .gallery-item::before {
+            content: '\f00e'; font-family: 'FontAwesome'; position: absolute;
+            top: 50%; left: 50%; transform: translate(-50%, -50%);
+            color: white; font-size: 2rem; z-index: 2; opacity: 0; transition: 0.3s ease;
         }
+        .gallery-item::after {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(37, 99, 235, 0.5); opacity: 0; transition: 0.3s ease; z-index: 1;
+        }
+        .gallery-item:hover::before, .gallery-item:hover::after { opacity: 1; }
 
-        .service-card i {
-            font-size: 3rem;
-            color: var(--secondary-color);
-            margin-bottom: 1.5rem;
+        /* Lightbox Modal CSS */
+        .lightbox {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.9); display: none; justify-content: center;
+            align-items: center; z-index: 2000; opacity: 0; transition: opacity 0.3s ease;
         }
+        .lightbox.active { display: flex; opacity: 1; }
+        .lightbox img { max-width: 90%; max-height: 90%; border-radius: 5px; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
+        .lightbox-close { position: absolute; top: 20px; right: 30px; color: white; font-size: 2rem; cursor: pointer; }
 
-        .service-card h3 {
-            margin-bottom: 1rem;
-        }
+        /* İletişim */
+        .contact-container { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+        .contact-info-item { display: flex; align-items: flex-start; gap: 1.5rem; margin-bottom: 2rem; }
+        .contact-info-item i { font-size: 1.5rem; color: var(--secondary-color); background: var(--light-bg); padding: 1rem; border-radius: 50%; transition: 0.3s; }
+        .contact-info-item:hover i { background: var(--secondary-color); color: white; transform: rotate(15deg); }
 
-        /* Galeri Bölümü */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-        }
+        footer { background: var(--primary-color); color: var(--white); text-align: center; padding: 2rem; }
 
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 8px;
-            height: 250px;
-        }
+        /* JS Scroll Animasyonları CSS'i */
+        .fade-in { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
 
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
+        /* Yukarı Çık Butonu */
+        #scrollTopBtn {
+            position: fixed; bottom: 30px; right: 30px; background: var(--secondary-color);
+            color: white; width: 50px; height: 50px; border-radius: 50%; border: none;
+            font-size: 1.5rem; cursor: pointer; display: none; z-index: 999;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: 0.3s;
         }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        /* İletişim Bölümü */
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-        }
-
-        .contact-info-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .contact-info-item i {
-            font-size: 1.5rem;
-            color: var(--secondary-color);
-            background: var(--light-bg);
-            padding: 1rem;
-            border-radius: 50%;
-        }
-
-        .contact-info-item h4 {
-            margin-bottom: 0.2rem;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--primary-color);
-            color: var(--white);
-            text-align: center;
-            padding: 2rem;
-        }
-
-        /* Animasyonlar (Scroll JS için) */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        #scrollTopBtn:hover { background: var(--primary-color); transform: translateY(-5px); }
 
         /* Mobil Uyumluluk */
         @media (max-width: 768px) {
             .nav-links {
-                position: fixed;
-                top: 70px;
-                right: -100%;
-                flex-direction: column;
-                background: var(--white);
-                width: 100%;
-                text-align: center;
-                padding: 2rem 0;
-                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-                transition: 0.4s ease;
+                position: fixed; top: 70px; right: -100%; flex-direction: column;
+                background: var(--white); width: 100%; text-align: center; padding: 2rem 0;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1); transition: 0.4s ease;
             }
-
-            .nav-links.active {
-                right: 0;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .hero-content h1 {
-                font-size: 2.2rem;
-            }
-
-            .about-grid, .contact-container {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
+            .nav-links.active { right: 0; }
+            .mobile-menu-btn { display: block; }
+            .hero-content h1 { font-size: 2rem; }
+            .about-grid, .contact-container { grid-template-columns: 1fr; gap: 2rem; }
         }
     </style>
 </head>
@@ -356,9 +189,7 @@
     <header>
         <div class="nav-container">
             <a href="#" class="logo">Şahin <span>CNC</span></a>
-            <div class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
+            <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
             <ul class="nav-links">
                 <li><a href="#hero">Ana Sayfa</a></li>
                 <li><a href="#about">Hakkımızda</a></li>
@@ -371,118 +202,105 @@
 
     <section id="hero" class="hero">
         <div class="hero-content fade-in">
-            <h1>Hassas Üretim, 25 Yıllık Güven</h1>
+            <h1>Şahin CNC ile <br><span class="typing-text"></span></h1>
             <p>Freze, Torna, Talaşlı İmalat ve Özel Kalıp Tasarımlarında İhtiyacınıza Özel Profesyonel Çözüm Ortağınız.</p>
             <a href="#contact" class="btn">Bizimle İletişime Geçin</a>
         </div>
     </section>
 
     <section id="about">
-        <div class="section-title fade-in">
-            <h2>Hakkımızda</h2>
-        </div>
+        <div class="section-title fade-in"><h2>Hakkımızda</h2></div>
         <div class="about-grid">
             <div class="about-text fade-in">
-                <h3>25 Yıllık Sektör Deneyimi</h3>
+                <h3>Yılların Verdiği Güven</h3>
                 <p>Çeyrek asırlık tecrübemiz ile en kaliteli yedek parçaları üretiyoruz. Kalite, güven ve zamanında teslimata her şeyden çok önem veriyoruz.</p>
-                <p>Fason yedek parça imalatı, talaşlı imalat, oyuncak vakum kalıbı, termoform kalıbı ve çikolata seperatörlerini tamamen müşteri spesifikasyonlarına ve isteklerine uygun olarak modern tezgahlarımızda üretiyoruz.</p>
-                
                 <div class="features">
-                    <div class="feature-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Yüksek Kalite Standartı</span>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-handshake"></i>
-                        <span>Koşulsuz Güven</span>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-users-cog"></i>
-                        <span>Deneyimli Uzman Ekip</span>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-clock"></i>
-                        <span>Zamanında Teslimat</span>
-                    </div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i><span>Yüksek Kalite</span></div>
+                    <div class="feature-item"><i class="fas fa-handshake"></i><span>Koşulsuz Güven</span></div>
+                    <div class="feature-item"><i class="fas fa-users-cog"></i><span>Uzman Ekip</span></div>
+                    <div class="feature-item"><i class="fas fa-clock"></i><span>Zamanında Teslimat</span></div>
                 </div>
             </div>
             <div class="about-image fade-in">
                 <img src="images/YeniProje1.jpg" alt="Şahin CNC İmalat" style="width: 100%; border-radius: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);" onerror="this.src='https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
             </div>
         </div>
+
+        <div class="stats-container fade-in">
+            <div class="stat-box">
+                <i class="fas fa-calendar-alt"></i>
+                <h3 class="counter" data-target="25">0</h3>
+                <p>Yıllık Tecrübe</p>
+            </div>
+            <div class="stat-box">
+                <i class="fas fa-cogs"></i>
+                <h3 class="counter" data-target="1500">0</h3>
+                <p>Tamamlanan Proje</p>
+            </div>
+            <div class="stat-box">
+                <i class="fas fa-smile"></i>
+                <h3 class="counter" data-target="500">0</h3>
+                <p>Mutlu Müşteri</p>
+            </div>
+        </div>
     </section>
 
-    <section id="services" class="services">
-        <div class="section-title fade-in">
-            <h2>Hizmetlerimiz</h2>
-            <p>Modern makine parkurumuz ve uzman kadromuz ile sunduğumuz çözümler.</p>
-        </div>
-        <div class="services-container">
-            <div class="service-card fade-in">
-                <i class="fas fa-cogs"></i>
-                <h3>Freze & Torna</h3>
-                <p>Hassas toleranslarda CNC freze ve torna işlemleri ile özel parça üretimleri.</p>
-            </div>
-            <div class="service-card fade-in">
-                <i class="fas fa-cubes"></i>
-                <h3>Kalıp İmalatı</h3>
-                <p>Oyuncak vakum kalıbı, termoform kalıbı ve çikolata seperatörleri tasarımı ve üretimi.</p>
-            </div>
-            <div class="service-card fade-in">
-                <i class="fas fa-tools"></i>
-                <h3>Fason ve Talaşlı İmalat</h3>
-                <p>İhtiyacınıza uygun malzemelerden, istenen özelliklerde seri fason parça imalatı.</p>
+    <section id="services" style="background: var(--light-bg); max-width: 100%;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div class="section-title fade-in"><h2>Hizmetlerimiz</h2></div>
+            <div class="services-container">
+                <div class="service-card fade-in">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Freze & Torna</h3>
+                    <p>Hassas toleranslarda CNC freze ve torna işlemleri ile özel parça üretimleri.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <i class="fas fa-cubes"></i>
+                    <h3>Kalıp İmalatı</h3>
+                    <p>Oyuncak vakum kalıbı, termoform kalıbı ve çikolata seperatörleri üretimi.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <i class="fas fa-tools"></i>
+                    <h3>Talaşlı İmalat</h3>
+                    <p>İhtiyacınıza uygun malzemelerden seri fason parça imalatı.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="gallery">
-        <div class="section-title fade-in">
-            <h2>Çalışmalarımız</h2>
-        </div>
+        <div class="section-title fade-in"><h2>Çalışmalarımız</h2></div>
         <div class="gallery-grid fade-in">
-            <div class="gallery-item">
+            <div class="gallery-item" onclick="openLightbox(this)">
                 <img src="images/Ekrangrnts2024-06-25171540.png" alt="CNC Çalışması 1" onerror="this.src='https://images.unsplash.com/photo-1565814636199-ae8133055c1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" onclick="openLightbox(this)">
                 <img src="images/YeniProjedxcsa.jpg" alt="CNC Çalışması 2" onerror="this.src='https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60'">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" onclick="openLightbox(this)">
                 <img src="https://images.unsplash.com/photo-1535303311164-664fc9ec6532?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Örnek Çalışma">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" onclick="openLightbox(this)">
                 <img src="https://images.unsplash.com/photo-1611078516366-2615438816f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Örnek Çalışma">
             </div>
         </div>
     </section>
 
     <section id="contact">
-        <div class="section-title fade-in">
-            <h2>Bize Ulaşın</h2>
-            <p>İhtiyaçlarınız için teklif almak veya detaylı bilgi edinmek için bizimle iletişime geçin.</p>
-        </div>
+        <div class="section-title fade-in"><h2>Bize Ulaşın</h2></div>
         <div class="contact-container">
             <div class="contact-info fade-in">
                 <div class="contact-info-item">
                     <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <h4>Adres</h4>
-                        <p>Biksan Sanayi Sitesi A1/15<br>Başakşehir / İstanbul</p>
-                    </div>
+                    <div><h4>Adres</h4><p>Biksan Sanayi Sitesi A1/15<br>Başakşehir / İstanbul</p></div>
                 </div>
                 <div class="contact-info-item">
                     <i class="fas fa-phone-alt"></i>
-                    <div>
-                        <h4>Telefon</h4>
-                        <p><a href="tel:+905428113496">0 542 811 34 96</a></p>
-                    </div>
+                    <div><h4>Telefon</h4><p><a href="tel:+905428113496">0 542 811 34 96</a></p></div>
                 </div>
                 <div class="contact-info-item">
                     <i class="fas fa-envelope"></i>
-                    <div>
-                        <h4>E-Posta</h4>
-                        <p><a href="mailto:sahinkalipset@hotmail.com">sahinkalipset@hotmail.com</a></p>
-                    </div>
+                    <div><h4>E-Posta</h4><p><a href="mailto:sahinkalipset@hotmail.com">sahinkalipset@hotmail.com</a></p></div>
                 </div>
             </div>
             <div class="contact-map fade-in">
@@ -492,77 +310,133 @@
     </section>
 
     <footer>
-        <p>&copy; <span id="year"></span> Şahin CNC Tüm Hakları Saklıdır.</p>
+        <p>© <span id="year"></span> Şahin CNC Tüm Hakları Saklıdır.</p>
     </footer>
 
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Büyük Resim">
+    </div>
+
+    <button id="scrollTopBtn" title="Yukarı Çık"><i class="fas fa-arrow-up"></i></button>
+
     <script>
-        // Dinamik Yıl Güncelleme (Footer için)
+        // 1. Dinamik Yıl
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Mobil Menü Aç/Kapat Mantığı
+        // 2. Mobil Menü Mantığı
         const mobileBtn = document.querySelector('.mobile-menu-btn');
         const navLinks = document.querySelector('.nav-links');
-        const navItems = document.querySelectorAll('.nav-links li a');
-
+        
         mobileBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            // İkonu değiştir (Hamburger'den Çarpı'ya)
             const icon = mobileBtn.querySelector('i');
-            if (navLinks.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
         });
 
-        // Menüden bir linke tıklandığında menüyü kapat (Mobil için)
-        navItems.forEach(item => {
+        document.querySelectorAll('.nav-links li a').forEach(item => {
             item.addEventListener('click', () => {
                 navLinks.classList.remove('active');
-                mobileBtn.querySelector('i').classList.remove('fa-times');
-                mobileBtn.querySelector('i').classList.add('fa-bars');
+                mobileBtn.querySelector('i').className = 'fas fa-bars';
             });
         });
 
-        // Yumuşak Geçiş (Smooth Scroll)
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                const headerOffset = 70;
-                const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        // 3. JS Daktilo (Typing) Efekti
+        const words = ["Hassas Üretim", "Freze İşlemleri", "Torna İşlemleri", "Kalıp İmalatı"];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingElement = document.querySelector('.typing-text');
 
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            });
-        });
+        function typeEffect() {
+            const currentWord = words[wordIndex];
+            if (isDeleting) {
+                typingElement.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingElement.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
 
-        // Sayfa Kaydırıldıkça Elementlerin Belirmesi (Scroll Animasyonları)
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.15
-        };
+            let typeSpeed = isDeleting ? 50 : 100;
 
-        const observer = new IntersectionObserver((entries, observer) => {
+            if (!isDeleting && charIndex === currentWord.length) {
+                typeSpeed = 2000; // Kelime bittiğinde bekle
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                typeSpeed = 500; // Yeni kelimeye geçmeden önce bekle
+            }
+            setTimeout(typeEffect, typeSpeed);
+        }
+        document.addEventListener("DOMContentLoaded", () => { setTimeout(typeEffect, 1000); });
+
+        // 4. JS Animasyonlu Sayaçlar & Scroll Fade-in (Görünür Olunca Çalışma)
+        const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
+                // Fade-in animasyonu
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); // Sadece bir kere çalışsın
+                    
+                    // Eğer görünen element sayaç kutusuysa, saydırma animasyonunu başlat
+                    if(entry.target.classList.contains('stats-container')) {
+                        const counters = document.querySelectorAll('.counter');
+                        const speed = 200; // Sayma hızı
+
+                        counters.forEach(counter => {
+                            const updateCount = () => {
+                                const target = +counter.getAttribute('data-target');
+                                const count = +counter.innerText;
+                                const inc = target / speed;
+
+                                if (count < target) {
+                                    counter.innerText = Math.ceil(count + inc);
+                                    setTimeout(updateCount, 20);
+                                } else {
+                                    counter.innerText = target + (target > 500 ? "+" : ""); // Büyük sayılara + ekle
+                                }
+                            };
+                            updateCount();
+                        });
+                    }
+                    observer.unobserve(entry.target); // Animasyon bir kere çalışsın
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.15 });
 
-        document.querySelectorAll('.fade-in').forEach(element => {
-            observer.observe(element);
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // 5. JS Resim Büyütme (Lightbox)
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        function openLightbox(element) {
+            const imgSrc = element.querySelector('img').src;
+            lightboxImg.src = imgSrc;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Arka plan kaydırmasını engelle
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Kaydırmayı geri aç
+        }
+
+        // 6. JS Yukarı Çık Butonu
+        const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        };
+
+        scrollTopBtn.addEventListener("click", function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
 </body>

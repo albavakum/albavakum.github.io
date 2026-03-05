@@ -1,1 +1,0 @@
-İmages Sayfası

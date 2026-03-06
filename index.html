@@ -74,10 +74,21 @@
 
         /* Hakkımızda */
         .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-        .about-image-wrapper { position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
-        .about-image-wrapper  { width: 100%; display: block; filter: grayscale(30%); transition: var(--transition); }
+        
+        /* Düzeltme Buradan Başlıyor: Foto 1 Boyutu */
+        .about-image-wrapper { 
+            position: relative; 
+            border-radius: 20px; 
+            overflow: hidden; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15); 
+            max-width: 550px; /* Fotoğrafın maksimum genişliğini sınırla */
+            margin-left: auto; /* Sağdan ve soldan otomatik boşluk ile */
+            margin-right: auto; /* Ortala */
+        }
+        .about-image-wrapper img { width: 100%; display: block; filter: grayscale(30%); transition: var(--transition); }
         .about-image-wrapper:hover img { filter: grayscale(0%); transform: scale(1.03); }
         .about-image-wrapper::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(15, 23, 42, 0.4), transparent); pointer-events: none; }
+        
         .features { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
         .feature-item i { color: var(--secondary-color); font-size: 1.5rem; margin-right: 10px;}
         
@@ -291,7 +302,7 @@
                 </div>
             </div>
             <div class="contact-map fade-in">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48117.3758117585!2d28.7618035!3d41.0838334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa5e9e2b02a63%3A0xc66c1e34c9f10928!2sBa%C5%9Fak%C5%9Fehir%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1680000000000!5m2!1str!2str" width="100%" height="300" style="border:0; border-radius:20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05);" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12030.73024831627!2d28.784656677937398!3d41.07590827255152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa5e997f74b6d%3A0x6d859e217c04139!2sİkitelli%20Organize%20Sanayi%20Bölgesi%2FBaşakşehir%2Fİstanbul!5e0!3m2!1str!2str!4v1716301323321!5m2!1str!2str" width="100%" height="300" style="border:0; border-radius:20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05);" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
